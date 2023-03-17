@@ -1,0 +1,29 @@
+.calendarTable {
+  width: 100%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: .8rem;
+  overflow: hidden;
+}
+.calendarTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.calendarTable th {
+  font-size: .8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  color: var(--darkgray);
+  padding: 16px 10px;
+}
+.calendarTable td {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #333;
+}
+.calendarTable td:hover {
+  cursor: pointer;
+}
