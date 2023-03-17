@@ -5,10 +5,10 @@ import {
   endOfWeek,
   addDays,
 } from "date-fns";
-import CalendarDay from "../CalendarDay";
+import CalendarWeek from "../CalendarWeek";
 import "./style.css";
 
-export default function CalendarTable({ date }) {
+export default function CalendarTable({ date, spcdeInfo }) {
   const monthStart = startOfMonth(date);
   const monthEnd = endOfMonth(monthStart);
   const startDate = startOfWeek(monthStart);
@@ -41,11 +41,12 @@ export default function CalendarTable({ date }) {
       <tbody>
         {/* 전달, 다음달 체크하여 font color 체크 */}
         {rows?.map((row) => (
-          <CalendarDay
+          <CalendarWeek
             day={row.day}
             date={date}
             days={row.days}
             monthStart={monthStart}
+            spcdeInfo={spcdeInfo}
           />
         ))}
       </tbody>

@@ -1,26 +1,35 @@
 .calendarCell {
-  width: 2.5rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-.calendarCell.inactive {
-  color: #ccc;
-}
-.calendarCell.today {
-  font-weight: 400;
-  border-radius: 30%;
-  color: #fff;
-  background-color: var(--primary);
-}
-.calendarCell.selected {
-  border-radius: 30%;
-  color: #ffffff;
-  background-color: var(--primary);
-}
-.calendarTable td:hover .calendarCell:not(.today) {
-  border-radius: 30%;
-  background-color: var(--gray);
-}
+    width: 3.6rem;
+    height: 3.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+  }
+  .calendarCell.inactive {
+    color: #ccc;
+  }
+  .calendarCell.today {
+    font-weight: 400;
+    border-radius: 30%;
+    color: #fff;
+    background-color: var(--primary);
+  }
+  .calendarCell.selected {
+    border-radius: 30%;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    background-color: #89bcff2e;
+  }
+  .calendarTable td:hover .calendarCell:not(.today, .selected) {
+    border-radius: 30%;
+    background-color: var(--gray);
+  }
+  .calendarTable .spcde {
+    font-size: 10px;
+    color: #d25c5c;
+    position: absolute;
+    bottom: 8px;
+  }

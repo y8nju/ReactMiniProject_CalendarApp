@@ -11,6 +11,12 @@
 .calendarHeader h3 {
   font-weight: 400;
 }
+.calendarHeader h3 .month {
+  color: var(--primary)
+}
+.calendarHeader h3 .year {
+  color: #333;
+}
 .calendarHeader button {
   width: 1.8rem;
   height: 1.8rem;
